@@ -204,7 +204,7 @@ DHDCFLAGS += -include "dhd_sec_feature.h"
 # Others
 #########
 
-#EXTRA_LDFLAGS += --strip-debug
+EXTRA_LDFLAGS += --strip-debug
 
 EXTRA_CFLAGS += $(DHDCFLAGS) -DDHD_DEBUG
 EXTRA_CFLAGS += -DSRCBASE=\"$(src)\"
