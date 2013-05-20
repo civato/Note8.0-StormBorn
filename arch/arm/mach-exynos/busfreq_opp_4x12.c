@@ -82,7 +82,7 @@ enum busfreq_level_idx {
 	LV_END
 };
 
-static struct busfreq_table *exynos4_busfreq_table;
+struct busfreq_table *exynos4_busfreq_table;
 
 static struct busfreq_table exynos4_busfreq_table_orig[] = {
 	{LV_0, 400266, 1100000, 0, 0, 0}, /* MIF : 400MHz INT : 200MHz */
@@ -874,7 +874,7 @@ struct opp *exynos4x12_monitor(struct busfreq_data *data)
 		cpufreq = opp_get_freq(data->max_opp);
 		if (cpu_load < max_cpu_threshold) {
 			opp = data->curr_opp;
-			if (cpu_load_slope > cpu_slope_size) {
+			if (cpu_load_slope < cpu_slope_size) {
 				cpufreq--;
 				opp = opp_find_freq_floor(data->dev, &cpufreq);
 			}
