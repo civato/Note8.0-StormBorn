@@ -754,4 +754,10 @@ config SLP_PROCESS_MON
 config CPU_UNDERVOLTING
 	tristate "Several undervolting interfaces"
 	default y
+
+config MALI_CONTROL
+	tristate "mali gpu control interfaces"
+	depends on VIDEO_MALI400MP_UMP
+	default y
 endif # MISC_DEVICES
+
