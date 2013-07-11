@@ -1,7 +1,7 @@
 VERSION = 3
 PATCHLEVEL = 0
 SUBLEVEL = 31
-EXTRAVERSION =~CivZ-StormBorn-Rev1.6~
+EXTRAVERSION =~CivZ-StormBorn-Rev2.1~
 NAME = Sneaky Weasel
 
 # *DOCUMENTATION*
